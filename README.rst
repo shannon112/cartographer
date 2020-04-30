@@ -25,6 +25,8 @@ Purpose
 and mapping (`SLAM`_) in 2D and 3D across multiple platforms and sensor
 configurations.
 
+trajectory extract: https://github.com/cartographer-project/cartographer_ros/issues/332 -> TrajectoryQuery
+
 |video|
 
 .. _Cartographer: https://github.com/googlecartographer/cartographer
