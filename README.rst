@@ -27,6 +27,28 @@ configurations.
 
 trajectory extract: https://github.com/cartographer-project/cartographer_ros/issues/332 -> TrajectoryQuery
 
+informations
+
+```
+# get trajectory_id
+rosservice call /get_trajectory_states "{}" 
+# get query submap
+rosservice call /submap_query "trajectory_id: 0 submap_index: 0" 
+# get trajectory points with timestamp
+rosservice call /trajectory_query "trajectory_id: 0"
+```
+
+commands
+
+```
+# finishing
+rosservice call /finish_trajectory "trajectory_id: 0"
+# saving
+rosservice call /write_state "filename: '${HOME}/Downloads/test_map.bag.pbstream' include_unfinished_submaps: false" 
+# for localization in different place, better to write in launch file
+/start_trajectorr
+```
+
 |video|
 
 .. _Cartographer: https://github.com/googlecartographer/cartographer
