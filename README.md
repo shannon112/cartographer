@@ -9,7 +9,7 @@ trajectory extract: https://github.com/cartographer-project/cartographer_ros/iss
 
 informations
 
-```
+```sh
 # get trajectory_id
 rosservice call /get_trajectory_states "{}" 
 # get query submap
@@ -20,7 +20,7 @@ rosservice call /trajectory_query "trajectory_id: 0"
 
 commands
 
-```
+```sh
 # finishing
 rosservice call /finish_trajectory "trajectory_id: 0"
 # saving
