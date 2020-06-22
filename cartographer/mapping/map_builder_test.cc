@@ -126,7 +126,7 @@ class MapBuilderTestBase : public T {
     return trajectory_id;
   }
 
-  std::unique_ptr<MapBuilderInterface> map_builder_;
+  std::unique_ptr<MapBuilderInterface> map_builder_; //marked_pose_graph
   proto::MapBuilderOptions map_builder_options_;
   proto::TrajectoryBuilderOptions trajectory_builder_options_;
   std::vector<::cartographer::transform::Rigid3d> local_slam_result_poses_;

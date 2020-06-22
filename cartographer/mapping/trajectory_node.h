@@ -30,7 +30,7 @@
 namespace cartographer {
 namespace mapping {
 
-struct TrajectoryNodePose {
+struct TrajectoryNodePose { //marked_pose_graph
   struct ConstantPoseData {
     common::Time time;
     transform::Rigid3d local_pose;
@@ -41,7 +41,7 @@ struct TrajectoryNodePose {
   absl::optional<ConstantPoseData> constant_pose_data;
 };
 
-struct TrajectoryNode {
+struct TrajectoryNode { //marked_pose_graph
   struct Data {
     common::Time time;
 

@@ -1,0 +1,81 @@
+cartographer/mapping/map_builder_test.cc:    int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:        map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:    map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:  EXPECT_EQ(1, map_builder_->num_trajectory_builders());
+cartographer/mapping/map_builder_test.cc:  EXPECT_TRUE(map_builder_->GetTrajectoryBuilder(trajectory_id) != nullptr);
+cartographer/mapping/map_builder_test.cc:  EXPECT_TRUE(map_builder_->pose_graph() != nullptr);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_TRUE(map_builder_->pose_graph()->IsTrajectoryFinished(trajectory_id));
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_GE(map_builder_->pose_graph()->constraints().size(), 50);
+cartographer/mapping/map_builder_test.cc:  EXPECT_THAT(map_builder_->pose_graph()->constraints(),
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes();
+cartographer/mapping/map_builder_test.cc:  const auto submap_data = map_builder_->pose_graph()->GetAllSubmapData();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetLocalToGlobalTransform(trajectory_id) *
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_GE(map_builder_->pose_graph()->constraints().size(), 10);
+cartographer/mapping/map_builder_test.cc:  EXPECT_THAT(map_builder_->pose_graph()->constraints(),
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes();
+cartographer/mapping/map_builder_test.cc:  const auto submap_data = map_builder_->pose_graph()->GetAllSubmapData();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetLocalToGlobalTransform(trajectory_id) *
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_TRUE(map_builder_->pose_graph()->IsTrajectoryFinished(trajectory_id));
+cartographer/mapping/map_builder_test.cc:  EXPECT_GE(map_builder_->pose_graph()->constraints().size(), 50);
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetAllSubmapData().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->DeleteTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->IsTrajectoryFinished(another_trajectory_id));
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetAllSubmapData().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->DeleteTrajectory(another_trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_EQ(map_builder_->pose_graph()->constraints().size(), 0);
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetAllSubmapData().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  int num_constraints = map_builder_->pose_graph()->constraints().size();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  map_builder_->SerializeState(/*include_unfinished_submaps=*/true, &writer);
+cartographer/mapping/map_builder_test.cc:      map_builder_->LoadState(&reader, false /* load_frozen_state */);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_EQ(num_constraints, map_builder_->pose_graph()->constraints().size());
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_GT(map_builder_->pose_graph()->constraints().size(), 0);
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes().SizeOfTrajectoryOrZero(
+cartographer/mapping/map_builder_test.cc:  map_builder_->SerializeState(/*include_unfinished_submaps=*/true, &writer);
+cartographer/mapping/map_builder_test.cc:  map_builder_->LoadState(&reader, true /* load_frozen_state */);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  int trajectory_id = map_builder_->AddTrajectoryBuilder(
+cartographer/mapping/map_builder_test.cc:      map_builder_->GetTrajectoryBuilder(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->FinishTrajectory(trajectory_id);
+cartographer/mapping/map_builder_test.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/mapping/map_builder_test.cc:  EXPECT_GE(map_builder_->pose_graph()->constraints().size(), 50);
+cartographer/mapping/map_builder_test.cc:  auto constraints = map_builder_->pose_graph()->constraints();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetTrajectoryNodes();
+cartographer/mapping/map_builder_test.cc:  const auto submap_data = map_builder_->pose_graph()->GetAllSubmapData();
+cartographer/mapping/map_builder_test.cc:      map_builder_->pose_graph()->GetLocalToGlobalTransform(trajectory_id) *
+cartographer/mapping/map_builder_test.cc:              map_builder_->pose_graph()
+cartographer/cloud/internal/map_builder_server.cc:  map_builder_->pose_graph()->SetGlobalSlamOptimizationCallback(
+cartographer/cloud/internal/map_builder_server.cc:  map_builder_->pose_graph()->RunFinalOptimization();
+cartographer/cloud/internal/map_builder_context_impl.h:      map_builder_server_->map_builder_->GetTrajectoryBuilder(

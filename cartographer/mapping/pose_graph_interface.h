@@ -65,12 +65,12 @@ class PoseGraphInterface {
     bool frozen = false;
   };
 
-  struct SubmapPose {
+  struct SubmapPose { //marked_pose_graph
     int version;
     transform::Rigid3d pose;
   };
 
-  struct SubmapData {
+  struct SubmapData {  //marked_pose_graph
     std::shared_ptr<const Submap> submap;
     transform::Rigid3d pose;
   };
@@ -97,10 +97,10 @@ class PoseGraphInterface {
   virtual void RunFinalOptimization() = 0;
 
   // Returns data for all submaps.
-  virtual MapById<SubmapId, SubmapData> GetAllSubmapData() const = 0;
+  virtual MapById<SubmapId, SubmapData> GetAllSubmapData() const = 0; //marked_pose_graph
 
   // Returns the global poses for all submaps.
-  virtual MapById<SubmapId, SubmapPose> GetAllSubmapPoses() const = 0;
+  virtual MapById<SubmapId, SubmapPose> GetAllSubmapPoses() const = 0; //marked_pose_graph
 
   // Returns the transform converting data in the local map frame (i.e. the
   // continuous, non-loop-closed frame) into the global map frame (i.e. the
@@ -109,11 +109,10 @@ class PoseGraphInterface {
       int trajectory_id) const = 0;
 
   // Returns the current optimized trajectories.
-  virtual MapById<NodeId, TrajectoryNode> GetTrajectoryNodes() const = 0;
+  virtual MapById<NodeId, TrajectoryNode> GetTrajectoryNodes() const = 0; //marked_pose_graph
 
   // Returns the current optimized trajectory poses.
-  virtual MapById<NodeId, TrajectoryNodePose> GetTrajectoryNodePoses()
-      const = 0;
+  virtual MapById<NodeId, TrajectoryNodePose> GetTrajectoryNodePoses() const = 0; //marked_pose_graph
 
   // Returns the states of trajectories.
   virtual std::map<int, TrajectoryState> GetTrajectoryStates() const = 0;

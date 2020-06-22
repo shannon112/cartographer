@@ -68,7 +68,7 @@ class MapBuilder : public MapBuilderInterface {
                                        const bool load_frozen_state) override;
 
   mapping::PoseGraphInterface *pose_graph() override {
-    return pose_graph_.get();
+    return pose_graph_.get(); //marked_pose_graph
   }
 
   int num_trajectory_builders() const override {
@@ -89,7 +89,7 @@ class MapBuilder : public MapBuilderInterface {
   const proto::MapBuilderOptions options_;
   common::ThreadPool thread_pool_;
 
-  std::unique_ptr<PoseGraph> pose_graph_;
+  std::unique_ptr<PoseGraph> pose_graph_; //marked_pose_graph
 
   std::unique_ptr<sensor::CollatorInterface> sensor_collator_;
   std::vector<std::unique_ptr<mapping::TrajectoryBuilderInterface>>
