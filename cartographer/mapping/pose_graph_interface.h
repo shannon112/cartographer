@@ -40,6 +40,7 @@ class PoseGraphInterface {
       double rotation_weight;
     };
 
+    // nodes-to-submap constriant
     SubmapId submap_id;  // 'i' in the paper.
     NodeId node_id;      // 'j' in the paper.
 

@@ -207,6 +207,7 @@ void OptimizationProblem2D::Solve(
     }
   }
 
+  // ceres problem
   ceres::Problem::Options problem_options;
   ceres::Problem problem(problem_options);
 
